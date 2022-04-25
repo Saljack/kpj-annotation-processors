@@ -1,16 +1,23 @@
 package cz.inventi.kpj.annotation.processors;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
 /**
  * Add lombok for adding getters, setters, toString, hashCode, equals, no
  * argument constructor and all argument constructor
  */
+@Data
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class User {
 
-  private String username;
+    private String username;
 
-  private String firstname;
-  private String lastname;
+    private String firstname;
+    private String lastname;
 
-  private String phone;
+    private String phone;
 
 }
