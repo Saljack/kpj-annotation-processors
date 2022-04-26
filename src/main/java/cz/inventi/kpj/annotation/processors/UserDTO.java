@@ -1,5 +1,8 @@
 package cz.inventi.kpj.annotation.processors;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
 public class UserDTO {
@@ -7,18 +10,12 @@ public class UserDTO {
   private String username;
 
   private String name;
+
   private String surname;
 
   private String phone;
 
   public UserDTO() {
-  }
-
-  public UserDTO(String username, String name, String surname, String phone) {
-    this.username = username;
-    this.name = name;
-    this.surname = surname;
-    this.phone = phone;
   }
 
   public String getUsername() {
