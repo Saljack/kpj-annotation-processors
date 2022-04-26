@@ -1,5 +1,10 @@
 package cz.inventi.kpj.annotation.processors;
 
+import org.mapstruct.InheritInverseConfiguration;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
+
 import java.util.Objects;
 
 public class KpjAnnotationProcessors {
@@ -12,6 +17,19 @@ public class KpjAnnotationProcessors {
    * 3. Create a static field {@link UserMapper#INSTANCE} with the instance of
    * this mapper
    */
+
+  @Mapper
+  public interface UserMapper{
+    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+    @Mapping(source = "firstname", target = "name")
+    @Mapping(source = "lastname", target = "surname")
+
+    UserDTO userToUserDTO(User user);
+
+    @InheritInverseConfiguration
+    User userDTOToUser(UserDTO user);
+
+  }
   public static void main(String[] args) {
     User user = new User("tpoledny", "Tomas", "Poledny", "777123456");
 
@@ -27,6 +45,7 @@ public class KpjAnnotationProcessors {
 
     User mappedUser = mapper.userDTOToUser(userDTO);
 
+    System.out.println(user + " | " + mappedUser);
     assertEquals(user, mappedUser);
     System.out.println("Mapping back: Success");
 
