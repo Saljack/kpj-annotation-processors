@@ -25,4 +25,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Test
-      run: java -jar target/kpj-annotation-processors-1.0-SNAPSHOT.jar
+      run: java -jar target/kpj-annotation-processors-1.0-SNAPSHOT-jar-with-dependencies.jar
