@@ -1,9 +1,8 @@
 package cz.inventi.kpj.annotation.processors;
 
-import lombok.Setter;
+import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.control.MappingControl;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
@@ -15,7 +14,6 @@ public interface UserMapper {
     @Mapping(source = "lastname", target = "surname")
     UserDTO userToUserDTO(User user);
 
-    @Mapping(source = "name", target = "firstname")
-    @Mapping(source = "surname", target = "lastname")
+    @InheritInverseConfiguration
     User userDTOToUser(UserDTO userDTO);
 }

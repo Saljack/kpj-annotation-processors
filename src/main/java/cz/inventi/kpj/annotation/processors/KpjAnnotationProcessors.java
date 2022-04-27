@@ -17,7 +17,7 @@ public class KpjAnnotationProcessors {
 
     UserMapper mapper = UserMapper.INSTANCE;
 
-    UserDTO userDTO = mapper.INSTANCE.userToUserDTO(user);
+    UserDTO userDTO = mapper.userToUserDTO(user);
 
     assertEquals(user.getUsername(), userDTO.getUsername());
     assertEquals(user.getFirstname(), userDTO.getName());

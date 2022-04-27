@@ -1,12 +1,12 @@
 package cz.inventi.kpj.annotation.processors;
 
-/*
+import javax.annotation.Generated;
+
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-04-26T09:56:33+0200",
-    comments = "version: 1.5.0.RC1, compiler: javac, environment: Java 17.0.2 (Homebrew)"
+    date = "2022-04-27T14:10:39+0200",
+    comments = "version: 1.5.0.RC1, compiler: javac, environment: Java 17.0.2 (Oracle Corporation)"
 )
-*/
 public class UserMapperImpl implements UserMapper {
 
     @Override

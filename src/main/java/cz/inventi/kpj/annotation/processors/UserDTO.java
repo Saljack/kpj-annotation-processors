@@ -1,8 +1,5 @@
 package cz.inventi.kpj.annotation.processors;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.Objects;
 
 public class UserDTO {
