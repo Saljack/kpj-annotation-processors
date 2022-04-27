@@ -1,5 +1,7 @@
 package cz.inventi.kpj.annotation.processors;
 
+import org.mapstruct.factory.Mappers;
+
 import java.util.Objects;
 
 public class KpjAnnotationProcessors {
@@ -8,11 +10,12 @@ public class KpjAnnotationProcessors {
    * 1. Implement necessary getters, setters etc. in the class {@link User}. <br/>
    * 2. Create an interface {@link UserMapper} with two methods<br/>
    * 2.1 {@link UserMapper#userToUserDTO(User) } <br/>
-   * 2.2 {@link UserMapper#userDTOToUser(User) } <br/>
+   * 2.2 {@link UserMapper#userDTOToUser(UserDTO) } <br/>
    * 3. Create a static field {@link UserMapper#INSTANCE} with the instance of
    * this mapper
    */
   public static void main(String[] args) {
+
     User user = new User("tpoledny", "Tomas", "Poledny", "777123456");
 
     UserMapper mapper = UserMapper.INSTANCE;
@@ -26,6 +29,8 @@ public class KpjAnnotationProcessors {
     System.out.println("Mapping to DTO: Success");
 
     User mappedUser = mapper.userDTOToUser(userDTO);
+    //User mappedUser = UserMapper.INSTANCE.userDTOToUser(userDTO);
+
 
     assertEquals(user, mappedUser);
     System.out.println("Mapping back: Success");
