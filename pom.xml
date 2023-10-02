@@ -60,19 +60,6 @@
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <configuration>
-          <annotationProcessorPaths>
-            <!--Add annotation processors lombok mapstruct-->
-
-          </annotationProcessorPaths>
-        </configuration>
-      </plugin>
-
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.6.0</version>
         <executions>
