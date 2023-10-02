@@ -10,8 +10,8 @@
     <maven.compiler.target>17</maven.compiler.target>
     <exec.mainClass>cz.inventi.kpj.annotation.processors.KpjAnnotationProcessors</exec.mainClass>
 
-    <org.mapstruct.version>1.5.0.RC1</org.mapstruct.version>
-    <org.projectlombok.version>1.18.24</org.projectlombok.version>
+    <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+    <org.projectlombok.version>1.18.30</org.projectlombok.version>
   </properties>
 
   <dependencies>
@@ -37,7 +37,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.11.0</version>
         <configuration>
           <annotationProcessorPaths>
             <!--Add annotation processors lombok mapstruct-->
@@ -66,7 +66,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.6.0</version>
         <executions>
           <execution>
             <phase>package</phase>
