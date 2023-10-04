@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class KpjAnnotationProcessors {
 
-  /**
+  /*
    * 1. Implement necessary getters, setters etc. in the class {@link User}. <br/>
    * 2. Create an interface {@link UserMapper} with two methods<br/>
    * 2.1 {@link UserMapper#userToUserDTO(User) } <br/>
