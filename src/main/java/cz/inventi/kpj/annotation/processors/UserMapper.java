@@ -1,4 +1,4 @@
 package cz.inventi.kpj.annotation.processors;
 
-public class UserMapper {
+public interface UserMapper {
 }
